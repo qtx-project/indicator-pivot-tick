@@ -18,7 +18,6 @@ jobs:
       #   uses: actions/setup-dotnet@v3
       #   with:
       #     dotnet-version: '8.0.x'
-
       # dont work because: "error CS0246: The type or namespace name 'TradingPlatform' could not be found ("
       # - name: Build
       #   run: dotnet build -o ./build

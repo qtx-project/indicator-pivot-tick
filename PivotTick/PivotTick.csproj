@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// Copyright (c) 2025 https://github.com/qtx-project
+// Licensed under the **[GPL-3.0 License](./license.txt)**.
+// See LICENSE file in the project root for full license information. 
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <!-- Path to the Quantower Directory. This is a variable used to 
+          define the location of the SDK needed to develop for the Quantower 
+          platform.
+        
+        ⚠️ IMPORTANT:
+          - You must **either** define the environment variable on your 
+            system (e.g., in Windows Environment Variables), 
+          - **or** manually replace `$(AMP_QUANTOWER_SDK_PATH)` with the 
+            absolute path to your Quantower SDK,
+            such as: `<MyQuantowerPath>C:/Quantower/...</MyQuantowerPath>`      
+          -->
+        <MyQuantowerPath>$(AMP_QUANTOWER_SDK_PATH)</MyQuantowerPath>
+
+        <!-- Specifies the target framework for the project. In this case, it 
+              targets .NET 8. -->
+        <TargetFramework>net8</TargetFramework>
+
+        <!-- Defines the C# language version to use for this project. "latest" 
+             ensures compatibility with the most recent features. -->
+        <LangVersion>latest</LangVersion>
+ 
+        <!-- Specifies the name of the assembly that will be generated when the 
+             project is compiled. -->
+        <AssemblyName>PivotTick</AssemblyName>
+
+        <!-- Defines the root namespace for the project, which will be used to 
+             organize the code within the project. -->
+        <RootNamespace>PivotTick</RootNamespace>
+
+        <!-- When set to false, it prevents appending the framework name (like 
+             "net8") to the output path. -->
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+        <!-- Defines the platform the application is targeting. In this case, 
+             it is "AnyCPU", meaning it will run on any platform (x86, x64, ARM). -->
+        <Platforms>AnyCPU</Platforms>
+
+        <!-- Specifies the algorithm type for this project. Here it is set 
+             as an "Indicator", indicating that the project is a trading 
+             indicator. -->
+        <AlgoType>Indicator</AlgoType>
+    </PropertyGroup>
+
+    <!-- Configuration for the Release build (optimized for production) -->
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <!-- Specifies the output path for the compiled assembly when building in 
+             Release configuration. The path points to the 'Indicators' folder under 
+             the 'Settings\Scripts' directory within the Quantower SDK path. -->
+        <OutputPath>$(MyQuantowerPath)\..\..\Settings\Scripts\Indicators\$(AssemblyName)</OutputPath>
+    </PropertyGroup>
+
+    <!-- Configuration for the Debug build (for development and troubleshooting) -->
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <!-- Specifies the output path for the compiled assembly when building in 
+             Debug configuration. The path is similar to Release, but it's intended 
+             for debugging and testing purposes. -->
+        <OutputPath>$(MyQuantowerPath)\..\..\Settings\Scripts\Indicators\$(AssemblyName)</OutputPath>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="System.Drawing.Common" Version="9.0.4"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="TradingPlatform.BusinessLayer">
+            <HintPath>$(MyQuantowerPath)\bin\TradingPlatform.BusinessLayer.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+   
+        <Reference Include="Trend">
+            <HintPath>$(MyQuantowerPath)\bin\Scripts\Indicators\Trend\Trend.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+
+</Project>

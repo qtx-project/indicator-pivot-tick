@@ -1,0 +1,38 @@
+name: Create Github Release
+run-name: ${{ github.actor }} - Create Github Release
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+ 
+      # - name: Set up .NET
+      #   uses: actions/setup-dotnet@v3
+      #   with:
+      #     dotnet-version: '8.0.x'
+
+      # dont work because: "error CS0246: The type or namespace name 'TradingPlatform' could not be found ("
+      # - name: Build
+      #   run: dotnet build -o ./build
+
+      - name: Prepare Zip
+        run: |
+          cd build
+          zip -r ../indicator.zip ./*
+ 
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            indicator.zip
+            readme.md
+            changelog.md
+            license.txt

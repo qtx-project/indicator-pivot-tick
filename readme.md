@@ -2,10 +2,7 @@
 
 ![preview Pivot Point Tick Indicator](.github/assets/image.png)
 
-- License: **[GPL-3.0 License](./license.txt)**
-
-Welcome to the `Pivot Point Tick Indicator` project! 
-  This temporary solution enables the display of pivot points on tick charts 
+This temporary solution enables the display of pivot points on tick charts 
   in Quantower. The platform’s native pivot point indicator does not currently 
   support tick charts properly due to its internal implementation.
 

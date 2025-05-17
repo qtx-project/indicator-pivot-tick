@@ -12,15 +12,14 @@ Welcome to the `Pivot Point Tick Indicator` project!
 A pivot point is a technical indicator used to identify potential support and 
   resistance levels based on the previous session's high, low, and close.  
 
-## Install
+## Download And Install
 
-### 0. Download the [Latest Release](https://github.com/qtx-project/indicator-pivot-tick/releases)
-
-Go to the GitHub releases page and download the `indicator.zip` file. 
-  While you can download the entire release, only `indicator.zip` is 
-  necessary for indicator installation.
-
-![example indicator.zip release](.github/assets/image-release.png) 
+<a
+    class="button button--primary"
+    href="https://github.com/qtx-project/indicator-pivot-tick/releases/latest/download/indicator.zip"
+    download
+    target="_blank"
+    rel="noopener noreferrer">Download the Latest Release</a>
 
 ### 1. Extract the ZIP File
 
@@ -37,28 +36,19 @@ Move the extracted `PivotTick` folder into your Quantower
 After moving the indicator, restart Quantower to apply the changes and
 add the indicator to your chart.
 
-## License
-
-This indicator is distributed under the [GPL-3.0 License](./license.txt), 
-  which allows you to use, modify and share it freely under the conditions 
-  of this license.
-
-## Disclaimer
-
-**IMPORTANT**: By using the PivotTick indicator, you acknowledge and agree 
-  that **you do so at your own risk**. The indicator is intended purely for educational 
-  and informational purposes. 
-
-**I, the creator, take no responsibility** for any losses or damages (direct, indirect, 
-  consequential, or otherwise) that may result from using this indicator in any live 
-  trading environment.
-
-- Ensure to test the indicator in a safe and controlled environment 
-  before using it in actual trading.
-- Always verify the behavior of the indicator with backtesting, paper 
-  trading, or in simulation mode.
-- This tool does not guarantee profitable trading outcomes and is not a 
-  substitute for professional financial advice or risk management strategies.
-
-By continuing to use this tool, you acknowledge that you have read, understood, a
-  nd agree to these terms.
+> [!CAUTION]
+> By using this indicator, you acknowledge and agree that **you do so at your own risk**.
+> The indicator is intended purely for educational and informational purposes.
+>
+> **I, the creator, take no responsibility** for any losses or damages (direct, indirect, 
+> consequential, or otherwise) that may result from using this indicator in any live 
+> trading environment.
+>
+> - Ensure to test the indicator in a safe and controlled environment 
+>   before using it in actual trading.
+> - Always verify the behavior of the indicator with backtesting, paper 
+>   trading, or in simulation mode.
+> - This tool does not guarantee profitable trading outcomes and is not a 
+>   substitute for professional financial advice or risk management strategies.
+>
+> By continuing to use this tool, you acknowledge that you have read, understood, and agree to these terms.

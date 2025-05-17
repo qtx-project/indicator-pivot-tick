@@ -21,21 +21,6 @@ A pivot point is a technical indicator used to identify potential support and
     target="_blank"
     rel="noopener noreferrer">Download the Latest Release</a>
 
-### 1. Extract the ZIP File
-
-Once the `indicator.zip` file is downloaded, open it and extract the 
-`PivotTick` folder.
-
-### 2. Move the indicator to the Appropriate Folder
-
-Move the extracted `PivotTick` folder into your Quantower 
-**indicators directory**. This is typically located at `Quantower/Settings/Indicators/..`
-
-### 3. Restart Quantower
-
-After moving the indicator, restart Quantower to apply the changes and
-add the indicator to your chart.
-
 > [!CAUTION]
 > By using this indicator, you acknowledge and agree that **you do so at your own risk**.
 > The indicator is intended purely for educational and informational purposes.
@@ -52,3 +37,18 @@ add the indicator to your chart.
 >   substitute for professional financial advice or risk management strategies.
 >
 > By continuing to use this tool, you acknowledge that you have read, understood, and agree to these terms.
+
+### 1. Extract the ZIP File
+
+Once the `indicator.zip` file is downloaded, open it and extract the 
+`PivotTick` folder.
+
+### 2. Move the indicator to the Appropriate Folder
+
+Move the extracted `PivotTick` folder into your Quantower 
+**indicators directory**. This is typically located at `Quantower/Settings/Indicators/..`
+
+### 3. Restart Quantower
+
+After moving the indicator, restart Quantower to apply the changes and
+add the indicator to your chart.

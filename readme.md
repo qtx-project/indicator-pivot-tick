@@ -1,6 +1,6 @@
 # Pivot Point Tick (Temporary solution)
 
-![preview Pivot Point Tick Indicator](./.github/assets/image.png)
+![preview Pivot Point Tick Indicator](.github/assets/image.png)
 
 - License: **[GPL-3.0 License](./license.txt)**
 
